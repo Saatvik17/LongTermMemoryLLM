@@ -24,7 +24,7 @@ class MemoryAgent:
         elif intent == "delete":
             keyword = intent_data.get("content", "")
             count = self.store.delete(keyword)
-            return f"Deleted {count} memory item(s)." if count else "⚠️ No matching memory."
+            return f"Deleted {count} memory item(s)." if count else "No matching memory."
 
         elif intent == "query":
             query = intent_data.get("query", user_msg)
